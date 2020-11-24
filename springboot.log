@@ -3673,3 +3673,4 @@ com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for colu
 2020-11-24 === [http-nio-8090-exec-3] === INFO  === com.ibm.springboot.controller.UserController === - 当前登录用户的信息：[User [id=null, userName=张三, realName=null, password=44444, sex=null]]
 2020-11-24 === [http-nio-8090-exec-4] === INFO  === com.ibm.springboot.controller.UserController === - 当前登录用户的信息：[User [id=null, userName=张三, realName=null, password=44444, sex=null]]
 2020-11-24 === [http-nio-8090-exec-2] === INFO  === com.ibm.springboot.controller.UserController === - 当前登录用户的信息：[User [id=null, userName=张三, realName=null, password=44444, sex=null]]
+2020-11-24 === [http-nio-8090-exec-8] === INFO  === com.ibm.springboot.controller.UserController === - 当前登录用户的信息：[User [id=null, userName=张三, realName=null, password=44444, sex=null]]
