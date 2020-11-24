@@ -1,6 +1,9 @@
 package com.ibm.springboot.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.ibm.springboot.bean.Employee;
 
-import com.ibm.springboot.mapper.EmployeeMapper;
+
 import com.ibm.springboot.service.EmployeeService;
 
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/employee")
 public class EmpController {
@@ -44,7 +47,7 @@ public class EmpController {
 	 * @return
 	 */
 	@GetMapping("/query/{id}")
-    public Employee getEmployee(@PathVariable("id") String id){
+    public Employee getEmployee(@PathVariable("id") int id){
         return employeeService.getEmpById(id);
     }
 	/**
@@ -61,9 +64,20 @@ public class EmpController {
 	 * @param id
 	 */
 	@DeleteMapping("/delete/{id}")
-    public String deleteEmployee(@PathVariable("id") String id){
+    public String deleteEmployee(@PathVariable("id") int id){
 		employeeService.deleteEmp(id);
 		 return "delete success";
     }
+	
+	
+	/**
+	 * 查询所有员工
+	 * @param all
+	 * @return
+	 */
+	@GetMapping("/findAll")
+	public List<Employee> findAll(){
+		return employeeService.findAll();
+	}
 	
 }

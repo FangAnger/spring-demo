@@ -2,11 +2,12 @@ package com.ibm.springboot.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ObjectUtils;
 
 import com.ibm.springboot.bean.User;
 import com.ibm.springboot.mapper.UserMapper;
-
+@Transactional
 @Service
 public class UserService {
 	@Autowired
@@ -26,9 +27,6 @@ public class UserService {
 		userMapper.updateUser(user);
 	}
 
-//	public User getUserById(Integer id) {
-//		return userMapper.getUserById(id);
-//	}
 
 	public void deleteUserById(Integer id) {
 		
